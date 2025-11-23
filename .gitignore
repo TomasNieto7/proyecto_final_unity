@@ -1,0 +1,14 @@
+# Carpetas generadas por Unity (NO SUBIR NUNCA)
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+
+# IDEs
+/.idea/
+/*.sln
+/*.csproj
+/*.unityproj
