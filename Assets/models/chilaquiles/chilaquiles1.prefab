@@ -2246,7 +2246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4189399090179146515}
   m_Layer: 0
-  m_Name: copyQuesos
+  m_Name: queso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3001,6 +3001,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: fff5bcf8fa5bf5846b36ff4cef1319ef, type: 2}
+    - target: {fileID: -8699563558833450125, guid: ccbb0a61eebfab544b55d3f4f3c86e68, type: 3}
+      propertyPath: m_Name
+      value: totopo
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ccbb0a61eebfab544b55d3f4f3c86e68, type: 3}
       propertyPath: m_LocalPosition.x
       value: -27.00261
@@ -3041,6 +3045,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7596534155637171779, guid: ccbb0a61eebfab544b55d3f4f3c86e68, type: 3}
+      propertyPath: m_Name
+      value: pollo
+      objectReference: {fileID: 0}
+    - target: {fileID: -5541081082535233631, guid: ccbb0a61eebfab544b55d3f4f3c86e68, type: 3}
+      propertyPath: m_Name
+      value: crema
+      objectReference: {fileID: 0}
+    - target: {fileID: -4555346106338151867, guid: ccbb0a61eebfab544b55d3f4f3c86e68, type: 3}
+      propertyPath: m_Name
+      value: cebolla
+      objectReference: {fileID: 0}
     - target: {fileID: -4211593016134124490, guid: ccbb0a61eebfab544b55d3f4f3c86e68, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.751
@@ -3048,6 +3064,10 @@ PrefabInstance:
     - target: {fileID: -4211593016134124490, guid: ccbb0a61eebfab544b55d3f4f3c86e68, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.378
+      objectReference: {fileID: 0}
+    - target: {fileID: -2749044393532462349, guid: ccbb0a61eebfab544b55d3f4f3c86e68, type: 3}
+      propertyPath: m_Name
+      value: plato
       objectReference: {fileID: 0}
     - target: {fileID: -1032039090468006183, guid: ccbb0a61eebfab544b55d3f4f3c86e68, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -3057,10 +3077,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: chilaquiles1
       objectReference: {fileID: 0}
+    - target: {fileID: 2670595623781836315, guid: ccbb0a61eebfab544b55d3f4f3c86e68, type: 3}
+      propertyPath: m_Name
+      value: huevo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3784703545170072159, guid: ccbb0a61eebfab544b55d3f4f3c86e68, type: 3}
+      propertyPath: m_Name
+      value: salsaVerde
+      objectReference: {fileID: 0}
     - target: {fileID: 5324126604386055189, guid: ccbb0a61eebfab544b55d3f4f3c86e68, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: fff5bcf8fa5bf5846b36ff4cef1319ef, type: 2}
+    - target: {fileID: 7010766000210876416, guid: ccbb0a61eebfab544b55d3f4f3c86e68, type: 3}
+      propertyPath: m_Name
+      value: salsaRoja
+      objectReference: {fileID: 0}
     - target: {fileID: 8145089887975293329, guid: ccbb0a61eebfab544b55d3f4f3c86e68, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -3068,9 +3100,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2480632355756639407, guid: ccbb0a61eebfab544b55d3f4f3c86e68, type: 3}
+    - {fileID: 3831613599716966935, guid: ccbb0a61eebfab544b55d3f4f3c86e68, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: ccbb0a61eebfab544b55d3f4f3c86e68, type: 3}
-      insertIndex: 5
+      insertIndex: 4
       addedObject: {fileID: 4189399090179146515}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccbb0a61eebfab544b55d3f4f3c86e68, type: 3}
