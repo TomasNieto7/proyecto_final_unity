@@ -5,11 +5,12 @@ public class GeneratorNpcs : MonoBehaviour
 {
     [Header("Configuración NPCs")]
     public GameObject[] npcPrefabs;
-    public int maxNPCs = 5; // Límite máximo de personas en la fila
+    public int maxNPCs = 5; 
 
     [Header("Posición y Orientación")]
     public Transform spawnPoint;
     public Transform objetivoAMirar; 
+    public Transform puntoSalida;    
     public float alturaExtra = 0.0f;
 
     [Header("Tiempos")]
@@ -30,26 +31,18 @@ public class GeneratorNpcs : MonoBehaviour
         {
             float waitTime = Random.Range(minTime, maxTime);
             yield return new WaitForSeconds(waitTime);
-            
-            // Intentamos generar el NPC
             SpawnRandomNPC();
         }
     }
 
     void SpawnRandomNPC()
     {
-        // 1. VERIFICACIÓN DE CANTIDAD (NUEVO)
-        // Buscamos todos los objetos que tengan el tag "npc" y los contamos
         int cantidadActual = GameObject.FindGameObjectsWithTag("npc").Length;
 
-        // Si ya hay 5 o más, nos salimos de la función sin crear nada
         if (cantidadActual >= maxNPCs)
         {
-            Debug.Log("La fila está llena. Esperando a que se vaya alguien...");
             return; 
         }
-
-        // ---------------------------------------------------
 
         if (npcPrefabs.Length == 0) return;
 
@@ -66,11 +59,7 @@ public class GeneratorNpcs : MonoBehaviour
         if (scriptDelNPC != null)
         {
             scriptDelNPC.objetivoDestino = objetivoAMirar; 
+            scriptDelNPC.puntoSalida = puntoSalida; 
         }
-    }
-
-    public void StopSpawning()
-    {
-        isSpawning = false;
     }
 }

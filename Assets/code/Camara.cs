@@ -7,14 +7,12 @@ public class Camara : MonoBehaviour
 
     public float RotacionHorizontal = 0f;
     public float RotacionVertical = 0f;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         float ValorX = Input.GetAxis("Mouse X")* 100 * Time.deltaTime;

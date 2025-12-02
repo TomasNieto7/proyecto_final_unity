@@ -6,12 +6,12 @@ public class OrderManager : MonoBehaviour
     public static OrderManager Instance;
 
     [Header("Pantalla PC")]
-    public TextMeshProUGUI textoMonitor; // Arrastra el texto del Canvas de la PC
+    public TextMeshProUGUI textoMonitor; 
 
     [Header("Orden Actual")]
     public bool hayOrdenActiva = false;
-    public TipoIngrediente salsaObjetivo; // ¿Verde o Roja?
-    public TipoIngrediente extraObjetivo; // ¿Pollo, Huevo o Nada?
+    public TipoIngrediente salsaObjetivo; 
+    public TipoIngrediente extraObjetivo; 
 
     void Awake()
     {
@@ -22,10 +22,8 @@ public class OrderManager : MonoBehaviour
     {
         if (hayOrdenActiva) return;
 
-        // 1. Elegir Salsa (50/50)
         salsaObjetivo = (Random.value > 0.5f) ? TipoIngrediente.SalsaVerde : TipoIngrediente.SalsaRoja;
 
-        // 2. Elegir Extra (33% cada uno)
         float r = Random.value;
         if (r < 0.33f) extraObjetivo = TipoIngrediente.Nada;
         else if (r < 0.66f) extraObjetivo = TipoIngrediente.Pollo;

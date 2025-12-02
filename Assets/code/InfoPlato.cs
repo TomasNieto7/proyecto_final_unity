@@ -13,11 +13,10 @@ public class InfoPlato : MonoBehaviour
             return;
         }
 
-        // Usamos <mspace> para que los caracteres tengan el mismo ancho y se alineen bien
         string lista = "<align=left><mspace=0.6em><b>PREPARACIÓN:</b>\n";
         var plato = PlatoCentral.Instance.ingredientesActuales;
 
-        // 1. Totopos (Usamos [X] para listo y [ ] para pendiente)
+        // 1. Totopos 
         bool tieneTotopos = plato.Contains(TipoIngrediente.Totopos);
         lista += tieneTotopos ? "[X] Totopos\n" : "[ ] Totopos\n";
 

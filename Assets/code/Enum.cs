@@ -7,6 +7,6 @@ public enum TipoIngrediente
     Queso,
     Cebolla,
     Crema,
-    Pollo, // Extra
-    Huevo  // Extra
+    Pollo, 
+    Huevo  
 }
