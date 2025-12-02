@@ -6,16 +6,26 @@ public class OrderManager : MonoBehaviour
     public static OrderManager Instance;
 
     [Header("Pantalla PC")]
-    public TextMeshProUGUI textoMonitor; 
+    public TextMeshProUGUI textoMonitor;
 
-    [Header("Orden Actual")]
+    [Header("HUD Jugador")]
+    public TextMeshProUGUI textoDinero; 
+
+    [Header("Datos del Juego")]
+    public int dineroActual = 0;
     public bool hayOrdenActiva = false;
-    public TipoIngrediente salsaObjetivo; 
-    public TipoIngrediente extraObjetivo; 
+    
+    public TipoIngrediente salsaObjetivo;
+    public TipoIngrediente extraObjetivo;
 
     void Awake()
     {
         if (Instance == null) Instance = this;
+    }
+
+    void Start()
+    {
+        ActualizarTextoDinero();
     }
 
     public void GenerarOrden()
@@ -38,13 +48,43 @@ public class OrderManager : MonoBehaviour
         string colorSalsa = (salsaObjetivo == TipoIngrediente.SalsaVerde) ? "<color=green>VERDES</color>" : "<color=red>ROJOS</color>";
         string textoExtra = (extraObjetivo == TipoIngrediente.Nada) ? "Sencillos" : "con " + extraObjetivo.ToString();
 
-        textoMonitor.text = $"CLIENTE:\nChilaquiles {colorSalsa}\n{textoExtra}";
+        if (textoMonitor != null)
+        {
+            textoMonitor.text = $"CLIENTE:\nChilaquiles {colorSalsa}\n{textoExtra}";
+            textoMonitor.color = Color.white;
+        }
+    }
+
+
+    public void ModificarDinero(int cantidad)
+    {
+        dineroActual += cantidad;
+        
+        if (textoDinero != null)
+        {
+            if (dineroActual < 0) textoDinero.color = Color.red;
+            else textoDinero.color = Color.green;
+        }
+
+        ActualizarTextoDinero();
+    }
+
+    void ActualizarTextoDinero()
+    {
+        if (textoDinero != null)
+        {
+            textoDinero.text = "$" + dineroActual.ToString();
+        }
     }
 
     public void CompletarOrden()
     {
         hayOrdenActiva = false;
-        textoMonitor.text = "¡Orden Entregada!\nEsperando...";
-        textoMonitor.color = Color.white;
+        
+        if (textoMonitor != null)
+        {
+            textoMonitor.text = "¡ENTREGADO!\nEsperando cliente...";
+            textoMonitor.color = Color.yellow;
+        }
     }
 }
